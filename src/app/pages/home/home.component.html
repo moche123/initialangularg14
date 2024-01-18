@@ -1,0 +1,7 @@
+<h2>HOME TITLE</h2>
+
+<button routerLink="/about">Go to About</button>
+
+<button (click)="sendToChild()">Send to Child</button>
+
+<app-child [dataFromParent]="infoToChild"></app-child>
