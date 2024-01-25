@@ -15,13 +15,21 @@ const routes: Routes = [
 
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( (e) => e.AuthModule )
+  },
+  {
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then( (e) => e.PagesModule )
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
 ];

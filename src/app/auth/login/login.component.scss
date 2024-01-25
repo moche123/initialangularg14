@@ -1,0 +1,101 @@
+//! PX TO REM
+//! CREAR PALETA DE COLORES CON VAR
+
+.flexbox-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* ROW: DERECHA A IZQUIERDA(ANCHO)*/
+    justify-content: center;
+  
+    .login-form {
+      /* width: 25%; */
+      padding: 2.5rem;
+      background: #fff;
+      border-radius: 25px;
+    }
+    
+    .login-form-title {
+      text-align: center;
+      font-size: 25px;
+      font-weight: 500;
+    }
+    
+    .mensaje-erroneo {
+      background: var(--red-error);
+      color: #fff;
+      padding: 30px 15px;
+      border-radius: 10px;
+      margin-top: 25px;
+      font-size: 15px;
+      text-align: center;
+      width: 100%;
+      width: 30%;
+    }
+    .wrap-input {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .wrap-input span,
+    input {
+      margin-top: 10px;
+    }
+    .label-input {
+      font-size: 15px;
+    }
+    .wrap-input input {
+      height: 35px;
+      font-size: 15px;
+      border-radius: 10px;
+      padding: 5px 15px;
+      border: 1px solid #8b8b8b;
+      outline: none;
+      line-height: 30px;
+    }
+    
+    .login-form-btn {
+      font-family: "Montserrat", sans-serif;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 19px;
+      margin-top: 15px;
+    }
+    .blue-valid {
+      background-color: #0086bf;
+      cursor: pointer;
+  
+      &:hover{
+          background-color: #050141;
+      }
+    }
+  
+  //   .blue-valid:hover{
+  //     background-color: #050141;
+  //   }
+  
+    .blue-invalid {
+      background-color: #72ccf3;
+      opacity: 0.5;
+    }
+    
+    .margin-mesaje-parrafo {
+      margin: 10px;
+    }
+    
+    .text-danger {
+      color: var(--red-error);
+      font-weight: bold;
+    }
+    
+    .crearCuenta {
+      margin-top: 20px;
+      color: rgb(0, 158, 153);
+    }
+    
+  }
+  
+  

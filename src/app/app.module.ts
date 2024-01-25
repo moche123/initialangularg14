@@ -9,12 +9,14 @@ import { HomeComponent } from './old/pages/home/home.component';
 import { ChildComponent } from './old/components/child/child.component';
 import { AboutComponent } from './old/pages/about/about.component';
 import { ApiService } from './old/services/api.service';
+import { BrokenImageDirective } from './old/directives/broken-image.directive';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ChildComponent,
-    AboutComponent
+    AboutComponent,
+    BrokenImageDirective
   ],
   imports: [
     BrowserModule,

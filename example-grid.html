@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            background-color: aquamarine;
+            height: 100%;
+            gap: 1rem;
+            display: grid;
+            /* grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr 2fr 2fr 1fr; */
+           grid-template-columns: repeat( auto-fill, minmax(150px,1fr)  );
+        }
+        .wrapper > div{
+            background-color: rgb(255, 255, 160);
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>A</div> 
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>I</div>
+        <div>J</div>
+        <div>K</div>
+        <div>L</div>
+    </div>
+</body>
+</html>
