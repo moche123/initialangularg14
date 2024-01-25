@@ -1,1 +1,13 @@
-<p>about works!</p>
+<h3>About</h3>
+
+<!-- IF, FOR SWTICH -->
+<ng-container *ngIf="infoUser$ | async; let user; else template">
+    <p>id: {{user.id}}</p>
+    <p>completed: {{user.completed}}</p>
+    <p>title: {{user.title}}</p>
+    <p>userId: {{user.userId}}</p>
+</ng-container>
+
+<ng-template #template>
+    ..ERROR LLAMANDO A LA API
+</ng-template>

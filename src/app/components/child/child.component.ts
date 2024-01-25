@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,20 +9,27 @@ export class ChildComponent implements OnInit, OnChanges, AfterViewInit, OnDestr
   
   @Input() dataFromParent = 0;
   @Output() dataToParent = new EventEmitter<number>();
+
+  @ViewChild('title') titleRef!: ElementRef;
   
   constructor(){
-    console.log('CONSTRUCTOR')
+    console.log('CONSTRUCTOR, sirve para inyección de dependencias');
   }
   
   ngOnInit(): void {
-    console.log('ngOnInit')
+    console.log('ngOnInit, sirve para inicializaciones');
+    // console.log(`Referencia al título: ${this.titleRef}`);
   }
+  
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges')
+    console.log('ngOnChanges, detección de cambios de inputs');
     console.log(changes)
+    // console.log(`Referencia al título: ${this.titleRef}`);
   }
+
   ngAfterViewInit(): void {
-    console.log('ngAfterViewInit')
+    console.log('ngAfterViewInit, modificaciones o acceso al DOM, por que se ejecuta una vez el contenido haya sido renderizado');
+    this.titleRef.nativeElement.innerHTML = 'TEXT CHANGED';
   }
   
   
@@ -33,7 +40,7 @@ export class ChildComponent implements OnInit, OnChanges, AfterViewInit, OnDestr
   
   
   ngOnDestroy(): void {
-    console.log('ngOnDestroy')
+    console.log('ngOnDestroy');
   }
   
 }
