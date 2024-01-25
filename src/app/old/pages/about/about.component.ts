@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-import { IElement } from 'src/app/interfaces/api.interface';
-import { ApiService } from 'src/app/services/api.service';
+import { IElement } from 'src/app/old/interfaces/api.interface';
+import { ApiService } from 'src/app/old/services/api.service';
 
 @Component({
   selector: 'app-about',
