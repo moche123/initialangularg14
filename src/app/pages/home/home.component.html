@@ -1,7 +1,11 @@
-<h2>HOME TITLE</h2>
+<div class="wrapper">
+    <h2>HOME TITLE</h2>
+    <button class="btn btn-danger" (click)="sendToChild()">Send to Child</button>
+    <hr>
+    <app-child [dataFromParent]="infoToChild" (dataToParent)="showChildInfo($event)"></app-child>
+    <hr>
+    <h4>
+        Info received from Child : {{dataFromChild}}
+    </h4>
+</div>
 
-<button routerLink="/about">Go to About</button>
-
-<button (click)="sendToChild()">Send to Child</button>
-
-<app-child [dataFromParent]="infoToChild"></app-child>
