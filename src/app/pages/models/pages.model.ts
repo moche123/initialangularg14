@@ -36,3 +36,22 @@ export interface ILocation {
   name: string;
   url: string;
 }
+
+export interface IDTOFavorite {
+  IdCharacter: number;
+  IdUser: string;
+  nameCharacter: string;
+  caracterUrlImagen: string;
+  token: string;
+}
+
+export interface IFavoritePostDTO {
+  ok: boolean;
+  msg?: string;
+  errors?: string;
+}
+
+export interface IGetFavoritePayload {
+  ok: boolean;
+  favorites: IDTOFavorite[];
+}

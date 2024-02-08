@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-
+import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root',
 })
@@ -30,6 +30,15 @@ export class AuthService {
 
       map((resp) => resp.ok),
       catchError((err) => {
+        if (err.status === 0) {
+          Swal.fire({
+            title: 'Error!',
+            text: 'Servidor caído',
+            icon: 'error',
+            confirmButtonText: 'Ok',
+          });
+        }
+
         return of(err.error); //! también existe from ==> retorna un observable, El "error" es propio del catchError
       })
     );

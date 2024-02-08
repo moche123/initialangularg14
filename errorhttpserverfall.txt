@@ -1,0 +1,34 @@
+HttpErrorResponse {headers: HttpHeaders, status: 0, statusText: 'Unknown Error', url: 'http://localhost:4000/api/auth', ok: false, …}
+error
+: 
+ProgressEvent {isTrusted: true, lengthComputable: false, loaded: 0, total: 0, type: 'error', …}
+headers
+: 
+HttpHeaders {normalizedNames: Map(0), lazyUpdate: null, headers: Map(0)}
+message
+: 
+"Http failure response for http://localhost:4000/api/auth: 0 Unknown Error"
+name
+: 
+"HttpErrorResponse"
+ok
+: 
+false
+status
+: 
+0
+statusText
+: 
+"Unknown Error"
+url
+: 
+"http://localhost:4000/api/auth"
+[[Prototype]]
+: 
+HttpResponseBase
+constructor
+: 
+class HttpErrorResponse
+[[Prototype]]
+: 
+Object

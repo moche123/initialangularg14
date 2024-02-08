@@ -1,1 +1,26 @@
-<p>favorites works!</p>
+<hr />
+<h1>Favoritos</h1>
+
+<div class="characteres-container">
+  <div
+    class="characteres-container__item text-center"
+    *ngFor="let character of favorites$ | async"
+  >
+    <h4>
+      {{
+        character.nameCharacter.length < 12
+          ? character.nameCharacter
+          : (character.nameCharacter | slice : 0 : 12)
+      }}
+    </h4>
+    <img
+      [src]="character.caracterUrlImagen"
+      [alt]="character.nameCharacter"
+      appImgBroken
+    />
+
+    <a class="btn btn-danger mb-5" (click)="deleteFavorite(character)">
+      DELETE
+    </a>
+  </div>
+</div>
