@@ -5,27 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './old/pages/home/home.component';
-import { ChildComponent } from './old/components/child/child.component';
-import { AboutComponent } from './old/pages/about/about.component';
-import { ApiService } from './old/services/api.service';
-import { BrokenImageDirective } from './old/directives/broken-image.directive';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ChildComponent,
-    AboutComponent,
-    BrokenImageDirective
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [
-    ApiService
-  ],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

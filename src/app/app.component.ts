@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
-@Component({ //! DECORADOR
+@Component({
+  //! DECORADOR
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'Hello Angular';
-}
+export class AppComponent {}
